@@ -1,0 +1,31 @@
+{
+  "name": "FancySelects",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pflynny/FancySelects.js.git",
+  "description": "You want a custom select and dropdown? Ain't no thang.",
+  "main": "fancy-select.js",
+  "keywords": [
+    "pretty",
+    "select",
+    "boxes",
+    "dropdown",
+    "megamenu",
+    "forms",
+    "css"
+  ],
+  "authors": [
+    "Paul Flynn | Springload",
+    "Josh Barr | Springload"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery":"1.11.0"
+  }
+}
