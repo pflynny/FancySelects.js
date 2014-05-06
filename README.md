@@ -9,17 +9,17 @@ jQuery 1.10
 ##Usage
 Add this data attribute to any select you'd like to pretify.
 ```html
-    <select label="course-location" data-select-menu-source>
+<select label="course-location" data-select-menu-source>
 ```
 
 Add custom classes to hang your CSS from
 ```html
-    <select label="course-location" data-select-menu-source data-select-menu-class='some-custom-class'>
+<select label="course-location" data-select-menu-source data-select-menu-class='some-custom-class'>
 ```
 
 Add a custom title
 ```html
-    <select label="course-location" data-select-menu-source data-select-menu-title="Find a course near you">
+<select label="course-location" data-select-menu-source data-select-menu-title="Find a course near you">
 ```
 
 
