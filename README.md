@@ -3,8 +3,7 @@ FancySelects.js
 
 You want a custom select and dropdown? Ain't no thang.
 
-If the select group contains optgroups these will be wrapped in their own div, this can be used to make a mega menu style dropdown.
-It will also parse a optgroup label, outputting a header. Handy.
+This plugin will parse through the select, any optgroups will be output in their own div, with ul > li > a structure. It will also parse a optgroup label, outputting a header. Handy.
 
 ##Requirements
 jQuery 1.10
