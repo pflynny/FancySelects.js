@@ -4,7 +4,7 @@ FancySelects.js
 You want a custom select and dropdown? Ain't no thang.
 
 ##Requirements
-jQuery 1.*
+jQuery 1.10
 
 ##Usage
 Add this data attribute to any select you'd like to pretify.
@@ -12,7 +12,6 @@ Add this data attribute to any select you'd like to pretify.
     <select label="course-location" data-select-menu-source>
 ```
 
-##Options
 Add custom classes to hang your CSS from
 ```html
     <select label="course-location" data-select-menu-source data-select-menu-class='some-custom-class'>
