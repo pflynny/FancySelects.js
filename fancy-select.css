@@ -1,0 +1,210 @@
+/*
+        base setup
+    */
+.select--hidden {
+  display: none; }
+
+.select-menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+.select-menu li {
+  margin: 0; }
+
+/*
+        Visible input
+    */
+.select-menu {
+  background: #FFF;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  position: relative;
+  width: 200px; }
+
+.select-menu--active {
+  border: 1px solid #5897FB; }
+
+.select-menu__current {
+  color: #666;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 6px 15px 5px;
+  position: relative;
+  white-space: nowrap; }
+
+.arrow-fade {
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+  /* IE10+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+  /* Opera 11.10+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+  /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+  /* W3C */
+  bottom: 1px;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+  position: absolute;
+  right: 0;
+  top: 1px;
+  width: 50px; }
+
+.arrow-fade:before {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #dadada;
+  content: " ";
+  height: 0;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  width: 0; }
+
+.select-menu--active .arrow-fade:before {
+  border-bottom: 5px solid #5897FB;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: none; }
+
+/*
+        Dropdown wrapper
+    */
+.select-menu__wrapper {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #cecec9;
+  display: none;
+  left: -1px;
+  margin-top: 4px;
+  min-width: 262px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 10; }
+
+.select-menu--active .select-menu__wrapper {
+  display: table; }
+
+.wide .select-menu__wrapper {
+  width: 393px; }
+
+/*
+        Dropdown
+    */
+.select-menu__list {
+  display: table-cell;
+  font-size: 15px;
+  line-height: 1.6;
+  list-style: none;
+  min-width: 170px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-top: 15px;
+  width: auto; }
+
+.select-menu__list + .select-menu__list {
+  border-left: 1px solid #cecec9; }
+
+.select-menu__list:first-child {
+  padding-right: 10px; }
+
+.select-menu__list h3 {
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase; }
+
+.select-menu__list h3 + ul {
+  margin-top: 10px; }
+
+.select-menu__list a, .select-menu__list a:visited {
+  color: #676767;
+  cursor: pointer;
+  display: block;
+  white-space: nowrap; }
+
+.select-menu__list a:hover {
+  color: #000; }
+
+.select-menu__list .select__item--selected {
+  color: red; }
+
+/*
+        Custom 1
+    */
+.custom-select {
+  border-color: #0d6a6b;
+  width: 300px; }
+
+.custom-select .select-menu__list {
+  padding-top: 5px; }
+
+.select-menu--active {
+  border-color: #5897FB; }
+
+.custom-select .select-menu__current {
+  color: #0d6a6b;
+  font-size: 13px; }
+
+.custom-select.select-menu--active .select-menu__current {
+  color: #5897FB; }
+
+.custom-select .select-menu__wrapper {
+  border-color: #5897FB;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  margin-top: -5px;
+  width: 300px; }
+
+.custom-select .arrow-fade:before {
+  border-top-color: #0d6a6b; }
+
+.custom-select li {
+  font-size: 13px; }
+
+/*
+        Custom two
+    */
+.custom-select-two {
+  width: 300px; }
+
+.select-menu--active {
+  border-color: #5897FB; }
+
+.custom-select .select-menu__current {
+  font-size: 13px;
+  color: #0d6a6b; }
+
+.custom-select.select-menu--active .select-menu__current {
+  color: #5897FB; }
+
+.custom-select-two .select-menu__wrapper {
+  left: 5px;
+  margin-top: 0;
+  top: 5px;
+  width: 300px; }
+
+.custom-select-two .select-menu__list {
+  display: block;
+  padding: 0; }
+
+.custom-select-two .select-menu__list a {
+  padding: 4px 10px; }
+
+.custom-select-two .select-menu__list a:hover {
+  background: #464646;
+  color: #fff; }
+
+.custom-select .arrow-fade:before {
+  border-top-color: #0d6a6b; }
+
+.custom-select li {
+  font-size: 13px; }
