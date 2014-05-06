@@ -3,6 +3,28 @@ FancySelects.js
 
 You want a custom select and dropdown? Ain't no thang.
 
+##Requirements
+jQuery 1.*
+
+##Usage
+Add this data attribute to any select you'd like to pretify.
+```html
+    <select label="course-location" data-select-menu-source>
+```
+
+##Options
+Add custom classes to hang your CSS from
+```html
+    <select label="course-location" data-select-menu-source data-select-menu-class='some-custom-class'>
+```
+
+Add a custom title
+```html
+    <select label="course-location" data-select-menu-source data-select-menu-title="Find a course near you">
+```
+
+
+
 ### Select
 ```html
 <select label="course-location" data-select-menu-source data-select-menu-class='wide'>
