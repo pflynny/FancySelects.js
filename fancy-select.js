@@ -70,7 +70,8 @@ SelectDropDown.prototype = {
         var option;
 
         if (label) {
-            var $title = $(document.createElement("h3"));
+            var $title = $(document.createElement("span"));
+            $title.addClass("select-menu__title");
             $title.append(label);
             container.append($title);
         }

@@ -1,0 +1,195 @@
+/**
+ * Setup
+ * ----------------------------------------------------------------------------
+ */
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+$select-menu-width: 200px;
+$border-arrow-color: #dadada;
+$active-border-arrow-color: #5897FB;
+
+
+/**
+ * Generic extend classes
+ * ----------------------------------------------------------------------------
+ */
+
+%relative {
+    position: relative;
+}
+
+%absolute {
+    position: absolute;
+}
+
+
+/**
+ * Base setup
+ * ----------------------------------------------------------------------------
+ */
+
+.select--hidden {
+    display: none;
+}
+
+.select-menu ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+.select-menu li {
+    margin: 0;
+}
+
+
+/**
+ * Visible input
+ * ----------------------------------------------------------------------------
+ */
+
+.select-menu {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid $border-arrow-color;
+    @extend %relative;
+    width: $select-menu-width;
+}
+
+.select-menu--active {
+    border: 1px solid $active-border-arrow-color;
+}
+
+    .select-menu__current {
+        color: #666;
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        overflow: hidden;
+        padding: 6px 15px 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+        .arrow-fade {
+            background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%); /* FF3.6+ */
+            background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* IE10+ */
+            background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* Opera 11.10+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* Chrome10+,Safari5.1+ */
+            background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+            bottom: 1px;
+            @extend %absolute;
+            right: 0;
+            top: 1px;
+            width: 50px;
+        }
+
+        .arrow-fade:before {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid $border-arrow-color;
+            content: " ";
+            height: 0;
+            @extend %absolute;
+            right: 10px;
+            top: 45%;
+            width: 0;
+
+            .select-menu--active & {
+                border-bottom: 5px solid $active-border-arrow-color;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: none;
+            }
+
+        }
+
+
+/**
+ * Dropdown wrapper
+ * ----------------------------------------------------------------------------
+ */
+
+.select-menu__wrapper {
+    background: white;
+    border-radius: 4px;
+    border: 1px solid $border-arrow-color;
+    display: none;
+    left: -1px;
+    margin-top: 4px;
+    overflow: hidden;
+    padding: 0;
+    @extend %absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.select-menu--active .select-menu__wrapper {
+    display: table!important;
+}
+
+
+/**
+ * Dropdown
+ * ----------------------------------------------------------------------------
+ */
+
+.select-menu__list {
+    display: table-cell;
+    font-size: 15px;
+    line-height: 1.6;
+    list-style: none;
+    min-width: 170px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: auto;
+
+    + .select-menu__list {
+        border-left: 1px solid $border-arrow-color;
+    }
+
+    &:first-child {
+        padding-right: 10px;
+    }
+
+    a {
+        color: #676767;
+        cursor: pointer;
+        display: block;
+        white-space: nowrap;
+
+        &:hover {
+            color: #000;
+        }
+
+    }
+
+    .select__item--selected {
+        color: red;
+    }
+
+}
+
+    .select-menu__title {
+        font-size: 16px;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        + ul {
+            margin-top: 5px;
+        }
+
+    }

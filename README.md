@@ -6,7 +6,7 @@ You want a custom select and dropdown? Ain't no thang.
 This plugin will parse through the select, any optgroups will be output in their own div, with ul > li > a structure. It will also parse a optgroup label, outputting a header. Handy.
 
 ##Requirements
-jQuery 1.10
+jQuery 1.11.0
 
 ##Usage
 Add this data attribute to any select you'd like to pretify.
@@ -53,3 +53,10 @@ Add a custom title
     </optgroup>
 </select>
 ```
+
+### Coming soon
+- Tab to active select
+- keyboard control
+
+
+
