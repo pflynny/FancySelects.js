@@ -13,8 +13,9 @@ function SelectDropDown(element, controller) {
     var selectClass = source.data("select-menu-class");
     var selectTitle = source.data("select-menu-title");
 
-    selectMenu.attr("data-select-js");
+    selectMenu.attr("data-select-js", "")
     selectMenu.addClass("select-menu");
+     selectMenu.attr("tabindex", "1")
     selectMenuLink.html(selected.text());
     selectMenuLink.addClass("select-menu__current");
     selectMenuArrow.addClass("arrow-fade");
