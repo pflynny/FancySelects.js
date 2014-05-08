@@ -17,6 +17,19 @@ $border-arrow-color: #dadada;
 $active-border-arrow-color: #5897FB;
 
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.select-menu {
+    outline: none;
+
+}
+
+.select-menu:focus {
+    border: 1px solid $active-border-arrow-color;
+}
+
 /**
  * Generic extend classes
  * ----------------------------------------------------------------------------
