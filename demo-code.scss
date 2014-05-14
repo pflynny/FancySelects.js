@@ -1,0 +1,198 @@
+
+/**
+ * Base styles
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+h1, .h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-top: 0.66667em;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-top: 0.75em;
+}
+
+.mb-0, h1, h2, p, li {
+    margin-bottom: 0;
+}
+
+.mt-0, h1:first-child, h2:first-child,
+p:first-child,  li:first-child {
+    margin-top: 0;
+}
+
+.mt-l {
+    margin-top: 2.25em;
+}
+.mb-0, h1, h2, p, li {
+    margin-bottom: 0;
+}
+
+/**
+ * Demo one
+ * ----------------------------------------------------------------------------
+ */
+
+$demo-arrow-border-color: #0d6a6b;
+
+.demo-select {
+    border-color: $demo-arrow-border-color;
+    width: 300px;
+
+    .select-menu__list {
+        padding-top: 5px;
+    }
+
+    .select-menu__current {
+        color: $demo-arrow-border-color;
+        font-size: 13px;
+    }
+
+    &.select-menu--active .select-menu__current {
+        color: #5897FB;
+    }
+
+    .select-menu__wrapper {
+        border-color: #5897FB;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+        margin-top: -5px;
+        width: 300px;
+    }
+
+    .arrow-fade:before  {
+        border-top-color: $demo-arrow-border-color
+    }
+
+    li {
+        font-size: 13px;
+    }
+
+    &.select-menu--active {
+        border-color: #5897FB;
+    }
+
+}
+
+
+/**
+ * Demo two
+ * ----------------------------------------------------------------------------
+ */
+
+
+.demo-select-two {
+
+    background-color: #3BB3E0;
+    padding: 10px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #FFF;
+    border: solid 1px #186F8F;
+    background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -webkit-linear-gradient(bottom, #2CA0CA 0%, #3EB8E5 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #2CA0CA), color-stop(1, #3EB8E5) );
+    box-shadow: inset 0px 1px 0px #7FD2F1, 0px 1px 0px #FFF;
+    border-radius: 5px;
+
+    &:active {
+        padding-bottom: 9px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 11px;
+        background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -webkit-linear-gradient(bottom, #3EB8E5 0%, #2CA0CA 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #3EB8E5), color-stop(1, #2CA0CA) );
+    }
+
+    &::before {
+        background-color: #CCD0D5;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 8px;
+        left: -8px;
+        top: -8px;
+        z-index: -1;
+        border-radius: 5px;
+        box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #FFF;
+    }
+
+    .select-menu__current {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    .arrow-fade {
+        background: none;
+        &::before {
+            border-top-color: white;
+        }
+    }
+
+    li {
+        font-size: 13px;
+    }
+
+    .select-menu__wrapper {
+        background-color: #186F8F;
+        border: none;
+        border-top: 1px solid #1B5A71;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        left: 0;
+        margin-top: 0;
+        top: 100%;
+        width: 100%;
+    }
+
+    .select-menu__list {
+        display: block;
+        padding: 0;
+        a {
+            padding: 4px 10px;
+            color: #fff;
+            &:hover {
+                background: #3BB3E0;
+                color: #fff;
+            }
+        }
+    }
+
+
+    &.select-menu--active {
+        .select-menu__wrapper {
+            display: block!important;
+        }
+        .arrow-fade::before {
+            border-bottom-color: white;
+        }
+    }
+
+
+}

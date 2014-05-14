@@ -1,0 +1,94 @@
+<html class='no-js'>
+<head>
+
+    <title>Fancy Select</title>
+    <link rel="stylesheet" href="/assets/css/fancy-select.css" />
+    <link rel="stylesheet" href="/assets/css/demo-code.css" />
+
+</head>
+<body>
+
+    <div style='width: 80%; margin: 70px auto 0;'>
+
+        <h1>Optgoups = Mega menu</h1>
+        <br>
+        <select label="course-location" data-select-menu-source>
+            <optgroup label="North Island">
+                <option selected="selected" value="55">Northland</option>
+                <option value="60">Auckland Region</option>
+                <option value="17">Taranaki</option>
+                <option value="5">Bay of Plenty</option>
+                <option value="56">Manawatu / Whanganui</option>
+                <option value="62">Manawatu / Wanganui</option>
+                <option value="7">Rotorua</option>
+                <option value="11">Gisborne</option>
+                <option value="13">Hawkes Bay</option>
+                <option value="21">Wairarapa</option>
+                <option value="9">Waikato</option>
+                <option value="63">Wellington Region</option>
+            </optgroup>
+            <optgroup label="South Island">
+                <option value="33">Nelson</option>
+                <option value="61">South Canterbury</option>
+                <option value="53">North Canterbury</option>
+                <option value="52">Central Otago</option>
+                <option value="43">Otago</option>
+                <option value="57">Marlborough</option>
+                <option value="37">West Coast</option>
+                <option value="45">Southland</option>
+            </optgroup>
+        </select>
+
+        <h2 class='mt-l'>No optgroups = standard dropdown</h2>
+        <br>
+        <select label="course-location" data-select-menu-source>
+            <option value="55">Northland</option>
+            <option value="60">Auckland Region</option>
+            <option value="17">Taranaki</option>
+            <option value="5">Bay of Plenty</option>
+            <option value="56">Manawatu / Whanganui</option>
+            <option value="62">Manawatu / Wanganui</option>
+            <option value="7">Rotorua</option>
+            <option value="11">Gisborne</option>
+            <option value="13">Hawkes Bay</option>
+            <option value="21"  selected="selected">Wairarapa</option>
+        </select>
+
+        <h2 class='mt-l'>Custom style</h2>
+        <br>
+        <select label="course-location" data-select-menu-source data-select-menu-class="demo-select">
+            <option selected="selected" value="">Choose your region</option>
+            <option value="60">Auckland Region</option>
+            <option value="17">Taranaki</option>
+            <option value="5">Bay of Plenty</option>
+            <option value="56">Manawatu / Whanganui</option>
+            <option value="62">Manawatu / Wanganui</option>
+            <option value="7">Rotorua</option>
+            <option value="11">Gisborne</option>
+            <option value="13">Hawkes Bay</option>
+            <option value="21">Wairarapa</option>
+        </select>
+
+        <h2 class='mt-l'>Custom style two</h2>
+        <br>
+        <select label="course-location" data-select-menu-source data-select-menu-class="demo-select-two">
+            <option selected="selected" value="">Choose your region</option>
+            <option value="60">Auckland Region</option>
+            <option value="17">Taranaki</option>
+            <option value="5">Bay of Plenty</option>
+            <option value="56">Manawatu / Whanganui</option>
+            <option value="62">Manawatu / Wanganui</option>
+            <option value="7">Rotorua</option>
+            <option value="11">Gisborne</option>
+            <option value="13">Hawkes Bay</option>
+            <option value="21">Wairarapa</option>
+        </select>
+
+    </div>
+
+<!-- scripts -->
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="/assets/js/fancy-select.js"></script>
+
+</body>
+</html>
