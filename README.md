@@ -5,6 +5,8 @@ You want a custom select and dropdown? Ain't no thang.
 
 Add data-select-menu-source to any select and hey presto! It's that easy. The plugin will parse through the select, any optgroups will be output in their own div, with ul > li > a structure. It will also parse a optgroup label, outputting a header. Handy.
 
+Check out the [example](http://pflynny.github.io/FancySelects.js/).
+
 ##Requirements
 jQuery 1.11.0
 
